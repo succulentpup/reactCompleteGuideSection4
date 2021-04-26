@@ -28,9 +28,12 @@ function App() {
       title:  'Laptop Insurance',
     },
   ]
+  const newExpenseHandler = (newExpense) => {
+    console.log({newExpense}, 'newExpense');
+  }
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onNewExpense={newExpenseHandler}/>
       <div>
         <Expenses expenses={expenses}/>
       </div>
